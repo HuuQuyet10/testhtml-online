@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credita</title>
+    <style>
+        @font-face { 
+            font-family: "SF_Pro_Displayss_Regular";
+            src: url("https://storage.googleapis.com/credita-vn/font/SF_Pro_Displayss_Regular.otf") format("truetype");
+        }
+        @font-face { 
+            font-family: "SVN_Poppinss_Bold";
+            src: url("https://storage.googleapis.com/credita-vn/font/SVN_Poppinss_Bold.otf") format("truetype");
+        }
+        @font-face { 
+            font-family: "SVN_Poppinss_Light";
+            src: url("https://storage.googleapis.com/credita-vn/font/SVN_Poppinss_Light.otf") format("truetype");
+        }
+        body{
+            font-family: "SF_Pro_Displayss_Regular";
+        }
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .total_body .box_top{
+            height: auto;
+            margin: 0px auto;
+            max-width: 650px;
+            z-index: 1;
+            background-image: url('https://storage.googleapis.com/credita-vn/image/box_bg_top.png');
+            height: 357px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .box_top_imgTop{
+            text-align: center;
+        }
+        .box_top_content{
+            margin-top: 26px;
+            padding: 0px 40px;
+            display: flex;
+        }
+        .box_top_content_left .content_left_title{
+            font-family: "SVN_Poppinss_Bold";
+            color: white;
+            line-height: 140%;
+            font-size: 26px
+        }
+        .box_top_content_left .content_left_cuocsong{
+            font-family: "SF_Pro_Displayss_Regular";
+            margin-bottom: 14px;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .box_top_content_left .content_left_text{
+            font-family: "SVN_Poppinss_Light";
+            color: white;
+            line-height: 22px;
+            margin-bottom: 28px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        .content_button_download{
+            font-family: "SVN_Poppinss_Bold";
+            font-size: 14.18px;
+            color: #1BC5AC;
+            font-weight: 700;
+            background-color: white;
+            padding: 8px 22px;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+        .content_button_download:hover{
+            box-shadow: 0px 6px 8px rgb(0 0 0 / 47%);
+        }
+        .box_slider .slider_title{
+            font-family: "SVN_Poppinss_Bold";
+            color: #1BC5AC;
+            margin-top: 64px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 25px;
+        }
+        .box_slider{
+            text-align: center;
+        }
+        .box_slider .box_silders{
+            display: flex;
+            justify-content: center;
+        }
+        .box_slider .slider_text{
+            text-align: center;
+            line-height: 22px;
+            color: #040C22;
+            font-size: 12px;
+            padding: 0px 71px;
+            margin-bottom: 25px;
+            font-weight: 400;
+            font-family: "SVN_Poppinss_Light";
+        }
+        .box_silders div .sliders_title{
+            font-size: 12px;
+            color: black;
+
+        }
+        .box_silders div .sliders_volums{
+            font-size: 16px;
+            color: #1BC5AC;
+            font-family: "SVN_Poppinss_Bold";
+
+        }
+        .box_silders div{
+            width: 183px;
+            height: 141px;
+            margin: 0px 22px;
+            padding-top: 32px;
+            background: #FFFFFF;
+            box-shadow: 0px 7px 19px 1px rgba(0, 0, 0, 0.08);
+            border-radius: 16px;
+        }
+        .box_security{
+            display: flex;
+        }
+        .security_boxImg img{
+            max-width: 327px;
+            height: 381px;
+            object-fit: contain;
+        }
+        .security_boxDetails{
+            padding-top: 23%;
+            text-align: right;
+        }
+        .security_boxDetails .boxDetails_title{
+            line-height: 120%;
+            font-weight: bold;
+            font-family: "SVN_Poppinss_Bold";
+            font-size: 24px;
+            color: #1BC5AC;
+        }
+        .boxDetails_textSpan{
+            font-size: 12px;
+            color: black;
+            font-family: "SVN_Poppinss_Light";
+            line-height: 22px;
+            margin-top: 9px;
+        }
+        .box_ungluongCredita{
+            padding-top: 3%;
+            display: flex;
+        }
+        .box_ungluongCredita div img {
+            max-width: 352px;
+            max-height: 357px;
+            object-fit: scale-down;
+        }
+        .ungLuongdetails_title{
+            font-family: "SVN_Poppinss_Bold";
+            font-size: 25px;
+            color: #1BC5AC;
+            font-weight: bold;
+            line-height: 120%;
+        }
+        .ungLuongdetails_textSpan{
+            font-size: 12px;
+            color: black;
+            margin-top: 9px;
+            line-height: 22px;
+            font-family: "SVN_Poppinss_Light";
+        }
+        .ungluongCredita_details{
+            padding-top: 7%;
+            padding-right: 9%;
+        }
+        .box_downloadApp{
+            text-align: center;
+        }
+        .box_downloadApp .downloadApp_textDetails{
+            font-family: "SVN_Poppinss_Light";
+            line-height: 22px;
+            margin-top: 67px;
+            font-size: 12px;
+            color: black;
+            margin-bottom: 12px;
+        }
+        .downloadApp_vnd{
+            font-family: "SVN_Poppinss_Bold";
+            font-size: 25px;
+            color: #1BC5AC;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+        .btn_downloadApp{
+            font-family: "SVN_Poppinss_Bold";
+            font-size: 15px;
+            color: #1BC5AC;
+            font-weight: bold;
+            background-color: white;
+            padding: 7px 12px;
+            text-decoration: none;
+            background: #FFFFFF;
+            box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+        }
+        .downloadApp_strikethrough{
+            margin-top: 73px !important;
+            width: 131px;
+            margin: auto;
+            margin-bottom: 18px !important;
+        }
+        .downloadApp__Now{
+            font-family: "SVN_Poppinss_Bold";
+            font-size: 25px;
+            color: #1BC5AC;
+            font-weight: 400;
+            margin-bottom: 16px;
+        }
+        .downloadApp_text{
+            line-height: 24px;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: "SVN_Poppinss_Light";
+            color: #666666;
+        }
+        .download_Link_store{
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+        }
+        .download_Link_store a:nth-child(1){
+            margin-right: 16px;
+        }
+        .box_footer{
+            max-width: 650px;
+            z-index: 1;
+            background-image: url("https://storage.googleapis.com/credita-vn/image/box_bottom.png");
+            background-size: revert;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            padding-top: 13px;
+            margin-top: 42px;
+        }
+        .box_footer .footer_colums:nth-child(1){
+            padding-top: 12px;
+            text-align: right;
+        }
+        .box_footer .footer_colums:nth-child(2){
+            text-align: center;
+            margin: 0px 42px;
+        }
+        .box_footer .footer_colums:nth-child(3){
+            padding-top: 12px;
+            text-align: left;
+        }
+        .box_footer .footer_colums div:nth-child(1){
+            margin-bottom: 14px;
+        }
+        .footer_colums a{
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+            font-family: "SVN_Poppinss_Light";
+            line-height: 18px;
+        }
+        .box_top_content_right img{
+            width: 292px;
+            height: 223px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="total_body">
+        <div class="box_top">
+            <div class="box_top_imgTop">
+                <a href="https://credita.vn/">
+                    <img src="https://storage.googleapis.com/credita-vn/image/box_top.png" />
+                </a>
+            </div>
+            <div class="box_top_content">
+                <div class="box_top_content_left">
+                    <p class="content_left_title">CHỦ ĐỘNG TÀI CHÍNH</p>
+                    <p class="content_left_cuocsong">Tận hưởng cuộc sống trọn vẹn</p>
+                    <p class="content_left_text">Credita cung cấp tới bạn giải pháp ứng lương linh hoạt, hỗ trợ giải quyết mọi khoản chi tiêu trong dịp Lễ, giúp bạn và gia đình kỳ nghỉ Lễ không âu lo.</p>
+                    <a href="https://credita.vn/install" class="content_button_download">TẢI APP NGAY</a>
+                </div>
+                <div class="box_top_content_right">
+                    <img src="https://i.ibb.co/rd1fz4K/box-img-tien-xu.png"/>
+                </div>
+            </div>
+            <div class="box_slider">
+                <p class="slider_title">Credita</p>
+                <p class="slider_text">Là sản phẩm hỗ trợ ứng lương nhanh chóng và tiện lợi, người dùng có thể ứng trước khoản lương mình nhận vào cuối tháng với những ưu điểm vượt trội</p>
+                <div class="box_silders">
+                    <div>
+                        <img src="https://storage.googleapis.com/credita-vn/image/icon_giaingan.svg" />
+                        <p class="sliders_title">Giải ngân trong</p>
+                        <p class="sliders_volums">15 PHÚT</p>
+                    </div>
+                    <div>
+                        <img src="https://storage.googleapis.com/credita-vn/image/icon_muchan.svg" />
+                        <p class="sliders_title">Hạn mức lên đến</p>
+                        <p class="sliders_volums">50 TRIỆU</p>
+                    </div>
+                    <div>
+                        <img src="https://storage.googleapis.com/credita-vn/image/icon_thitruongthap.svg" />
+                        <p class="sliders_title">Phí dịch vụ</p>
+                        <p class="sliders_volums">THẤP NHẤT</p>
+                        <P class="sliders_title">thị trường</P>
+                    </div>
+                </div>
+            </div>
+            <div class="box_security">
+                <div class="security_boxImg">
+                    <img src="https://i.ibb.co/6WSmDRk/Path-2-1.png"/>
+                </div>
+                <div class="security_boxDetails">
+                    <p class="boxDetails_title">Xây dựng gói</p>
+                    <p class="boxDetails_title boxDetails_title2">Ứng lương linh hoạt</p>
+                    <p class="boxDetails_textSpan">Hỗ trợ mọi lúc khi bạn cần chỉ với thao tác đơn giản, nhanh chóng.</p>
+                </div>
+            </div>
+            <div class="box_ungluongCredita">
+                <div class="ungluongCredita_details">
+                    <p class="ungLuongdetails_title">Ứng lương nhanh</p>
+                    <p class="ungLuongdetails_title">Có ngay credita</p>
+                    <p class="ungLuongdetails_textSpan">Credita ra đời nhằm nâng cao chất lượng cuộc sống của mỗi cá nhân, đem đến cho người lao động giải pháp ứng lương linh hoạt, tức thì khi gặp vấn đề về chi tiêu trong cuộc sống với 2 sản phẩm ứng lương tiện lợi</p>
+                </div>
+                <div>
+                    <img src="https://storage.googleapis.com/credita-vn/image/img_ungluong.jpg" />
+                </div>
+            </div>
+            <div class="box_downloadApp">
+                <p class="downloadApp_textDetails">Vừa được ứng lương tiêu dùng lại vừa có cơ hội nhận những phần quà hấp dẫn từ những ngày sự kiện rinh quà đến từ team dự án. Cùng tham gia sự kiện để có cơ hội rinh ngay</p>
+                <p class="downloadApp_vnd">1.000.000 VNĐ</p>
+                <a href="https://credita.vn/tin-tuc/su-kien/1136" class="btn_downloadApp" target="_black">THAM GIA NGAY</a>
+                <hr class="downloadApp_strikethrough"/>
+                <p class="downloadApp__Now">Tải Credita ngay !</p>
+                <p class="downloadApp_text">Truy cập các tiện ích đầy đủ trên Ứng dụng điện thoại Credita</p>
+                <p class="downloadApp_text">Bạn có thể sử dụng Email và mật khẩu mà bạn vừa đăng ký.</p>
+                <div class="download_Link_store">
+                    <a href="https://play.google.com/store/apps/details?id=vn.credita">
+                        <img src="https://storage.googleapis.com/credita-vn/image/icon_chplay.svg"/>
+                    </a>
+                    <a href="https://credita.vn/install">
+                        <img src="https://storage.googleapis.com/credita-vn/image/icon_appstore.svg"/>
+                    </a>
+                </div>
+            </div>
+            <div class="box_footer">
+                <div class="footer_colums">
+                    <div>
+                        <img src="https://storage.googleapis.com/credita-vn/image/icon_global.png" />
+                        <a href="https://credita.vn">www.credita.vn</a>
+                    </div>
+                    <div>
+                        <img src="https://storage.googleapis.com/credita-vn/image/icon_mail.png" />
+                        <a href="mailto:hotro@credita.vn">hotro@credita.vn</a>
+                    </div>
+                </div>
+                <div class="footer_colums">
+                    <img src="https://storage.googleapis.com/credita-vn/image/icon_qr.png" />
+                </div>
+                <div class="footer_colums">
+                    <div>
+                        <img src="https://i.ibb.co/YLnPqdr/icon-fb.png" />
+                        <a href="htpps://fb.com/credita">fb.com/credita</a>
+                    </div>
+                    <div>
+                        <img src="https://storage.googleapis.com/credita-vn/image/icon_phone.png" />
+                        <a href="tel:+84965084446">0965084446</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
